@@ -3,7 +3,7 @@ pipeline{
     environment{
         IMAGE_NAME="myapp"
         DOCKER_HUB_USER="caro26lina"
-        FULL_IMAGE=$DOCKER_HUB_USER/$IMAGE_NAME:latest
+        FULL_IMAGE="${DOCKER_HUB_USER}/${IMAGE_NAME}:latest"
     }
     stages{
         stage('checkout'){
@@ -54,7 +54,7 @@ pipeline{
             failure{
                 echo "failed"
             }
-            
+
         }
     }
 }
