@@ -47,14 +47,13 @@ pipeline{
                 '''
             }
         }
-        post{
-            success{
-                echo "Completed"
-            }
-            failure{
-                echo "failed"
-            }
-
+    }
+    post{
+        success{
+            echo "Completed"
+        }
+        failure{
+            echo "failed"
         }
     }
 }
